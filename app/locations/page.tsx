@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -50,7 +51,7 @@ export default function LocationsPage() {
             <Navbar />
 
             <main className="relative z-10 flex-1 pt-20">
-                <section className="w-full py-16 md:py-24 text-white">
+                <section className="w-full py-16 md:py-24 text-white border-b">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Our Locations</h1>
                         <p className="mx-auto max-w-[700px] text-slate-300 text-lg">
@@ -185,21 +186,7 @@ export default function LocationsPage() {
                     </div>
                 </section>
 
-                <section className="w-full py-16 md:py-24 text-white">
-                    <div className="container px-4 md:px-6 mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-4">Want to Bring uplift.cle to Your Community?</h2>
-                        <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-                            We're always looking for opportunities to expand our impact. If you're interested in partnering with us or
-                            bringing our approach to your community, we'd love to hear from you.
-                        </p>
-                        <Button
-                            size="lg"
-                            className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700"
-                        >
-                            <Link href="/contact">Get in Touch</Link>
-                        </Button>
-                    </div>
-                </section>
+                <Footer />
             </main>
         </div>
     )

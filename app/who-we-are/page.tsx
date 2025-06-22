@@ -36,7 +36,7 @@ export default function WhoWeArePage() {
             <Navbar />
 
             <main className="relative z-10 flex-1 pt-20">
-                <section className="w-full py-16 md:py-2 text-slate-200">
+                <section className="w-full py-16 md:py-2 text-slate-200 border-b">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Who We Are</h1>
                         <p className="mx-auto max-w-[700px] text-slate-400 text-lg">
@@ -80,7 +80,7 @@ export default function WhoWeArePage() {
                 </section>
 
 
-                <section className="w-full py-16 md:py-24">
+                <section className="w-full py-16 md:py-24 border-b">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Technical Leads</h2>
@@ -109,7 +109,7 @@ export default function WhoWeArePage() {
                     </div>
                 </section>
 
-                <section className="w-full py-16 md:py-24 ">
+                <section className="w-full py-16 md:py-24 border-b">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Strategic Leads</h2>
@@ -138,7 +138,7 @@ export default function WhoWeArePage() {
                     </div>
                 </section>
 
-                <section className="w-full py-16 md:py-24">
+                <section className="w-full py-16 md:py-24 border-b">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Analysts</h2>

@@ -31,7 +31,7 @@ export default function ContactPage() {
           </section>
   
           {/* Contact Form and Info */}
-          <section className="w-full py-16 md:py-24 ">
+          <section className="w-full py-16 md:py-24 border-b">
             <div className="container px-4 md:px-6 mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Contact Form */}
