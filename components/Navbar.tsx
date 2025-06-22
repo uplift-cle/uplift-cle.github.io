@@ -116,7 +116,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden mt-2 bg-slate-800/90 backdrop-blur-md border border-white/10 rounded-lg shadow-lg py-3 px-6">
+        <div className="md:hidden mt-2 backdrop-blur-md border border-white/10 rounded-lg shadow-lg py-3 px-6">
           <nav className="flex flex-col gap-3">
             {links.map((link) => (
               <Link

@@ -101,13 +101,13 @@ export default function HomePage() {
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
                                 </a>
-                                <a href="#teams">
+                                <a href="/contact">
                                     <Button
                                         variant="outline"
                                         size="lg"
                                         className="border-[#0B7D44] text-[#0B7D44] hover:bg-[#143e26]"
                                     >
-                                        View Teams
+                                        Contact Us
                                     </Button>
                                 </a>
                             </div>
@@ -174,7 +174,7 @@ export default function HomePage() {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                                <Card className="border-slate-700 hover:shadow-lg transition-shadow bg-slate-900">
+                                <Card className="border-slate-700 hover:shadow-lg transition-shadow ">
                                     <CardContent className="p-8 space-y-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-[#0B7D44] to-green-700 rounded-lg flex items-center justify-center">
                                             <Users className="h-6 w-6 text-white" />
@@ -187,7 +187,7 @@ export default function HomePage() {
                                     </CardContent>
                                 </Card>
 
-                                <Card className="border-slate-700 hover:shadow-lg transition-shadow bg-slate-900">
+                                <Card className="border-slate-700 hover:shadow-lg transition-shadow ">
                                     <CardContent className="p-8 space-y-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
                                             <Target className="h-6 w-6 text-white" />
@@ -200,7 +200,7 @@ export default function HomePage() {
                                     </CardContent>
                                 </Card>
 
-                                <Card className="border-slate-700 hover:shadow-lg transition-shadow bg-slate-900">
+                                <Card className="border-slate-700 hover:shadow-lg transition-shadow ">
                                     <CardContent className="p-8 space-y-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-[#0B7D44] to-green-700 rounded-lg flex items-center justify-center">
                                             <Lightbulb className="h-6 w-6 text-white" />
@@ -213,7 +213,7 @@ export default function HomePage() {
                                     </CardContent>
                                 </Card>
 
-                                <Card className="border-slate-700 hover:shadow-lg transition-shadow bg-slate-900">
+                                <Card className="border-slate-700 hover:shadow-lg transition-shadow ">
                                     <CardContent className="p-8 space-y-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
                                             <Globe className="h-6 w-6 text-white" />
@@ -226,7 +226,7 @@ export default function HomePage() {
                                     </CardContent>
                                 </Card>
 
-                                <Card className="border-slate-700 hover:shadow-lg transition-shadow bg-slate-900">
+                                <Card className="border-slate-700 hover:shadow-lg transition-shadow ">
                                     <CardContent className="p-8 space-y-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-[#0B7D44] to-green-700 rounded-lg flex items-center justify-center">
                                             <Heart className="h-6 w-6 text-white" />
@@ -239,7 +239,7 @@ export default function HomePage() {
                                     </CardContent>
                                 </Card>
 
-                                <Card className="border-slate-700 hover:shadow-lg transition-shadow bg-slate-900">
+                                <Card className="border-slate-700 hover:shadow-lg transition-shadow ">
                                     <CardContent className="p-8 space-y-4">
                                         <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
                                             <Building className="h-6 w-6 text-white" />

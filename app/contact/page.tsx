@@ -122,7 +122,7 @@ export default function ContactPage() {
                     <div className="flex items-start space-x-4">
                       <MapPin className="h-6 w-6 text-green-500 mt-1" />
                       <div>
-                        <h3 className="font-semibold text-white">Location</h3>
+                        <h3 className="font-semibold text-white">Current Locations</h3>
                         <p className="text-slate-300">Cleveland, Ohio</p>
                         <p className="text-sm text-slate-500">Serving the Greater Cleveland area</p>
                       </div>
