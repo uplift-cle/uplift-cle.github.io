@@ -40,11 +40,17 @@ export default function LocationsPage() {
     ]
 
     return (
-        <div className="flex flex-col min-h-screen bg-slate-900 text-slate-100">
+        <div className="relative flex flex-col min-h-screen text-slate-200">
+            <div className="pointer-events-none fixed inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
+            </div>
+
             <Navbar />
 
-            <main className="flex-1 pt-20">
-                <section className="w-full py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
+            <main className="relative z-10 flex-1 pt-20">
+                <section className="w-full py-16 md:py-24 text-white">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Our Locations</h1>
                         <p className="mx-auto max-w-[700px] text-slate-300 text-lg">
@@ -62,14 +68,16 @@ export default function LocationsPage() {
                             </p>
                         </div>
 
-                        <div className="relative rounded-2xl shadow-2xl overflow-hidden mb-12">
-                        <div className="relative h-[500px] md:h-[600px] bg-gradient-to-br from-slate-900 via-slate-850 via-60% to-emerald-950">                                <div className="absolute inset-0">
+                        <div className="relative rounded-2xl shadow-2xl overflow-x-auto mb-12">
+                            <div className="relative min-w-[700px] h-[500px] md:h-[600px]">
+                                <div className="absolute inset-0">
                                     <Image
                                         src="https://simplemaps.com/static/demos/resources/svg-library/svgs/us.svg"
                                         alt="Map of the United States"
                                         width={1000}
                                         height={600}
                                         className="w-full h-auto max-w-4xl mx-auto object-contain rounded-xl"
+                                        style={{ filter: 'invert(90%) sepia(10%)' }}
                                     />
                                 </div>
 
@@ -101,15 +109,14 @@ export default function LocationsPage() {
                                             )}
                                         </div>
 
-                                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                            <div className="bg-slate-800 text-slate-100 px-3 py-2 rounded-lg shadow-lg text-sm whitespace-nowrap">
+                                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                            <div className="bg-slate-800 text-slate-100 px-3 py-2 rounded-lg shadow-lg text-sm text-center">
                                                 <div className="font-semibold">{location.name}</div>
                                                 <div className="text-slate-300 text-xs">{location.description}</div>
-                                                <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-800"></div>
                                             </div>
                                         </div>
 
-                                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 text-center">
+                                        <div className="absolute top-[110%] left-1/2 transform -translate-x-1/2 mt-1 text-center whitespace-nowrap">
                                             <div className={`font-semibold text-sm ${location.status === "active" ? "text-green-400" : "text-slate-400"}`}>
                                                 {location.name}
                                             </div>
@@ -118,7 +125,7 @@ export default function LocationsPage() {
                                     </div>
                                 ))}
 
-                                <div className="absolute bottom-4 left-4 bg-slate-800/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                                <div className="absolute bottom-4 left-4 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[90%] sm:max-w-xs">
                                     <h4 className="font-semibold text-white mb-2 text-sm">Legend</h4>
                                     <div className="space-y-2">
                                         <div className="flex items-center space-x-2">
@@ -142,7 +149,7 @@ export default function LocationsPage() {
                             {locations.map((location) => (
                                 <Card
                                     key={location.id}
-                                    className="border border-slate-700 bg-slate-800 hover:border-slate-600 transition-all duration-300"
+                                    className="border border-slate-700 hover:border-slate-600 transition-all duration-300"
                                 >
                                     <CardContent className="p-6">
                                         <div className="flex items-center space-x-3 mb-4">
@@ -185,7 +192,7 @@ export default function LocationsPage() {
                     </div>
                 </section>
 
-                <section className="w-full py-16 md:py-24 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+                <section className="w-full py-16 md:py-24 text-white">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h2 className="text-3xl font-bold mb-4">Want to Bring uplift.cle to Your Community?</h2>
                         <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">

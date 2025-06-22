@@ -10,26 +10,32 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 export default function ContactPage() {
     return (
-      <div className="flex flex-col min-h-screen bg-slate-900 text-white">
-        <Navbar />
-  
-        <main className="flex-1 pt-20">
+      <div className="relative flex flex-col min-h-screen  text-slate-200">
+      <div className="pointer-events-none fixed inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+          <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+          <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
+      </div>
+
+      <Navbar />
+
+      <main className="relative z-10 flex-1 pt-20">
           {/* Hero Section */}
-          <section className="w-full py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
+          <section className="w-full py-16 md:py-24 text-white">
             <div className="container px-4 md:px-6 mx-auto text-center">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Contact Us</h1>
-              <p className="mx-auto max-w-[700px] text-slate-300 text-lg">
+              <p className="mx-auto max-w-[900px] text-slate-300 text-lg">
                 Ready to get involved? We'd love to hear from you. Reach out to learn more about our work or explore partnership opportunities.
               </p>
             </div>
           </section>
   
           {/* Contact Form and Info */}
-          <section className="w-full py-16 md:py-24 bg-slate-900">
+          <section className="w-full py-16 md:py-24 ">
             <div className="container px-4 md:px-6 mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Contact Form */}
-                <Card className="bg-slate-800 border-slate-700 text-white">
+                <Card className=" border-slate-900 text-white">
                   <CardHeader>
                     <CardTitle className="text-2xl text-white">Get in Touch</CardTitle>
                   </CardHeader>
@@ -37,28 +43,28 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="firstName" className="text-slate-200">First Name</Label>
-                        <Input id="firstName" placeholder="Your first name" className="bg-slate-700 text-white border-slate-600 placeholder-slate-400" />
+                        <Input id="firstName" placeholder="Your first name" className="bg-slate-900 text-white border-slate-600 placeholder-slate-400" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName" className="text-slate-200">Last Name</Label>
-                        <Input id="lastName" placeholder="Your last name" className="bg-slate-700 text-white border-slate-600 placeholder-slate-400" />
+                        <Input id="lastName" placeholder="Your last name" className="bg-slate-900 text-white border-slate-600 placeholder-slate-400" />
                       </div>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-slate-200">Email</Label>
-                      <Input id="email" type="email" placeholder="your.email@example.com" className="bg-slate-700 text-white border-slate-600 placeholder-slate-400" />
+                      <Input id="email" type="email" placeholder="your.email@example.com" className="bg-slate-900 text-white border-slate-600 placeholder-slate-400" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="phone" className="text-slate-200">Phone Number</Label>
-                      <Input id="phone" type="tel" placeholder="(216) 555-0123" className="bg-slate-700 text-white border-slate-600 placeholder-slate-400" />
+                      <Input id="phone" type="tel" placeholder="(216) 555-0123" className="bg-slate-900 text-white border-slate-600 placeholder-slate-400" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="reason" className="text-slate-200">Reason for Contact</Label>
                       <Select>
-                        <SelectTrigger className="bg-slate-700 text-white border-slate-600">
+                        <SelectTrigger className="bg-slate-900 text-white border-slate-600">
                           <SelectValue placeholder="Select a reason" />
                         </SelectTrigger>
-                        <SelectContent className="bg-slate-800 text-white border-slate-700">
+                        <SelectContent className="bg-slate-800 text-white border-slate-900">
                           <SelectItem value="partnership">Partnership Opportunity</SelectItem>
                           <SelectItem value="volunteer">Volunteer Interest</SelectItem>
                           <SelectItem value="media">Media Inquiry</SelectItem>
@@ -73,10 +79,10 @@ export default function ContactPage() {
                         id="message"
                         placeholder="Tell us more about how you'd like to get involved or what you'd like to know..."
                         rows={5}
-                        className="bg-slate-700 text-white border-slate-600 placeholder-slate-400"
+                        className="bg-slate-900 text-white border-slate-600 placeholder-slate-400"
                       />
                     </div>
-                    <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
+                    <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-900 hover:to-emerald-900 text-white">
                       Send Message
                       {/** TODO: add server-side code to actually implement this */}
                     </Button>
@@ -123,7 +129,7 @@ export default function ContactPage() {
                     </div>
                   </div>
   
-                  <Card className="bg-slate-800 border-slate-700 text-white">
+                  <Card className="bg-slate-900 border-slate-900 text-white">
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-white mb-3">Office Hours</h3>
                       <div className="space-y-2 text-sm">
@@ -146,9 +152,8 @@ export default function ContactPage() {
               </div>
             </div>
           </section>
-        </main>
-  
-        <Footer />
+          <Footer />
+        </main>  
       </div>
     )
   }

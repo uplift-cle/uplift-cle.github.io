@@ -61,11 +61,18 @@ export default function HomePage() {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen bg-slate-900 text-slate-200">
+        <div className="relative flex flex-col min-h-screen">
+            
+            <div className="pointer-events-none fixed inset-0">
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
+            </div>
+
             <Navbar />
 
-            <main className="flex-1 pt-20">
-                <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-900">
+            <main className="relative z-10 flex-1 pt-20">
+                <section className="w-full py-12 md:py-24 lg:py-32">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="flex flex-col items-center space-y-4 text-center">
                             <div className="space-y-2">
@@ -108,53 +115,53 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                <section id="mission" className="w-full py-16 md:py-24 lg:py-32 bg-slate-800 text-white">
-          <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center space-y-8 text-center">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Mission</h2>
-                <p className="mx-auto max-w-[800px] text-slate-300 text-lg md:text-xl/relaxed leading-relaxed">
-                  Uplift.cle is dedicated to addressing acute, systemic issues within Cleveland through innovative,
-                  interdisciplinary, and research-driven solutions. We aim to develop scalable interventions and
-                  coordinate relief efforts integrating public health, technology, policy, and business strategies to
-                  uplift underserved communities.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-                <Card className="bg-slate-800 border-slate-700">
-                  <CardContent className="p-6 text-center space-y-4">
-                    <Users className="h-12 w-12 text-[#0B7D44] mx-auto" />
-                    <h3 className="text-xl font-semibold text-white">Community Impact</h3>
-                    <p className="text-slate-300">
-                      Working directly with Cleveland residents to understand and address their most pressing needs.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-slate-800 border-slate-700">
-                  <CardContent className="p-6 text-center space-y-4">
-                    <Target className="h-12 w-12 text-[#0B7D44] mx-auto" />
-                    <h3 className="text-xl font-semibold text-white">Research-Driven</h3>
-                    <p className="text-slate-300">
-                      Leveraging data and evidence-based approaches to create sustainable, scalable solutions.
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-slate-800 border-slate-700">
-                  <CardContent className="p-6 text-center space-y-4">
-                    <Lightbulb className="h-12 w-12 text-[#0B7D44] mx-auto" />
-                    <h3 className="text-xl font-semibold text-white">Innovation</h3>
-                    <p className="text-slate-300">
-                      Bringing together diverse expertise to develop creative solutions to complex challenges.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
+                <section id="mission" className="w-full py-16 md:py-24 lg:py-32 border  text-white">
+                    <div className="container px-4 md:px-6 mx-auto">
+                        <div className="flex flex-col items-center space-y-8 text-center">
+                            <div className="space-y-4">
+                                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Mission</h2>
+                                <p className="mx-auto max-w-[800px] text-slate-300 text-lg md:text-xl/relaxed leading-relaxed">
+                                    Uplift.cle is dedicated to addressing acute, systemic issues within Cleveland through innovative,
+                                    interdisciplinary, and research-driven solutions. We aim to develop scalable interventions and
+                                    coordinate relief efforts integrating public health, technology, policy, and business strategies to
+                                    uplift underserved communities.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
+                                <Card className=" border-slate-700">
+                                    <CardContent className="p-6 text-center space-y-4">
+                                        <Users className="h-12 w-12 text-[#0B7D44] mx-auto" />
+                                        <h3 className="text-xl font-semibold text-white">Community Impact</h3>
+                                        <p className="text-slate-300">
+                                            Working directly with Cleveland residents to understand and address their most pressing needs.
+                                        </p>
+                                    </CardContent>
+                                </Card>
+                                <Card className=" border-slate-700">
+                                    <CardContent className="p-6 text-center space-y-4">
+                                        <Target className="h-12 w-12 text-[#0B7D44] mx-auto" />
+                                        <h3 className="text-xl font-semibold text-white">Research-Driven</h3>
+                                        <p className="text-slate-300">
+                                            Leveraging data and evidence-based approaches to create sustainable, scalable solutions.
+                                        </p>
+                                    </CardContent>
+                                </Card>
+                                <Card className=" border-slate-700">
+                                    <CardContent className="p-6 text-center space-y-4">
+                                        <Lightbulb className="h-12 w-12 text-[#0B7D44] mx-auto" />
+                                        <h3 className="text-xl font-semibold text-white">Innovation</h3>
+                                        <p className="text-slate-300">
+                                            Bringing together diverse expertise to develop creative solutions to complex challenges.
+                                        </p>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* Tenants Section */}
-                <section id="tenants" className="w-full py-16 md:py-24 lg:py-32 bg-slate-700">
+                <section id="tenants" className="w-full py-16 md:py-24 lg:py-32 border">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="flex flex-col items-center space-y-12">
                             <div className="space-y-4 text-center">
@@ -248,9 +255,10 @@ export default function HomePage() {
                         </div>
                     </div>
                 </section>
+                <Footer />
+
             </main>
 
-            <Footer />
         </div>
     )
 }

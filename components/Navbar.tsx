@@ -61,7 +61,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-4xl px-4">
-      <div className="bg-slate-800/80 backdrop-blur-md border border-white/10 rounded-full shadow-lg px-6 py-3 flex items-center justify-between">
+      <div className=" backdrop-blur-md border border-white/10 rounded-full shadow-lg px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center justify-center">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">

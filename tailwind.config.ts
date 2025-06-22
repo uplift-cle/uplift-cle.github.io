@@ -12,7 +12,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
-			...defaultColors,
+			castleton: "",
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
