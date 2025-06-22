@@ -31,7 +31,7 @@ export default function LocationsPage() {
             id: 3,
             name: "Las Vegas",
             status: "planned",
-            position: { top: "45%", left: "36%" },
+            position: { top: "46%", left: "36.5%" },
             description: "Extending our impact to the West Coast",
             established: "Coming 2025",
             neighborhoods: "TBD",
@@ -107,13 +107,6 @@ export default function LocationsPage() {
                                             {location.status === "active" && (
                                                 <div className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-30"></div>
                                             )}
-                                        </div>
-
-                                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                            <div className="bg-slate-800 text-slate-100 px-3 py-2 rounded-lg shadow-lg text-sm text-center">
-                                                <div className="font-semibold">{location.name}</div>
-                                                <div className="text-slate-300 text-xs">{location.description}</div>
-                                            </div>
                                         </div>
 
                                         <div className="absolute top-[110%] left-1/2 transform -translate-x-1/2 mt-1 text-center whitespace-nowrap">

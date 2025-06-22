@@ -6,15 +6,15 @@ import SpotlightCard from "@/components/SpotlightCard"
 
 export default function WhoWeArePage() {
     const techLeads = [
-        { name: "Seth Tivakaran", title: "Founder & Executive Director", image: "/placeholder.svg?height=200&width=200" },
-        { name: "Board Member 1", title: "Chief Strategy Officer", image: "/placeholder.svg?height=200&width=200" },
-        { name: "Board Member 2", title: "Chief Operations Officer", image: "/placeholder.svg?height=200&width=200" },
+        { name: "Jacob Slater", title: "Hydroponics Tech Lead", image: "/placeholder.svg?height=200&width=200" },
+        { name: "Praveen Sureshkumar", title: "Refrigeration Tech Lead", image: "/placeholder.svg?height=200&width=200" },
+        { name: "Donovan Crowley", title: "Project Tech Lead", image: "/placeholder.svg?height=200&width=200" },
     ]
 
     const stratLeads = [
-        { name: "Manager 1", title: "Community Health Analytics Lead", image: "/placeholder.svg?height=150&width=150" },
-        { name: "Manager 2", title: "Economic Mobility Lead", image: "/placeholder.svg?height=150&width=150" },
-        { name: "Manager 3", title: "Housing & Infrastructure Lead", image: "/placeholder.svg?height=150&width=150" },
+        { name: "Adam Joseph", title: "Hydroponics Strategic Lead", image: "/placeholder.svg?height=150&width=150" },
+        { name: "Adam Esa", title: "Refrigeration Strategic Lead", image: "/placeholder.svg?height=150&width=150" },
+        { name: "Brendan Bradish", title: "Project Strategic Lead", image: "/placeholder.svg?height=150&width=150" },
     ]
 
     const analysts = [
@@ -36,7 +36,6 @@ export default function WhoWeArePage() {
             <Navbar />
 
             <main className="relative z-10 flex-1 pt-20">
-                {/* Hero Section */}
                 <section className="w-full py-16 md:py-2 text-slate-200">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Who We Are</h1>
@@ -49,6 +48,41 @@ export default function WhoWeArePage() {
                 <section className="w-full py-16 md:py-24">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
+                            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Founder</h2>
+                            <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded"></div>
+                            <p className="text-slate-300 max-w-2xl mx-auto">
+                                Uplift.cle was founded with the goal of addressing Cleveland’s most pressing challenges through collaboration, innovation, and compassion.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 py-10 border-b">
+                            {/* Image */}
+                            <div className="w-full md:w-1/3 flex justify-center">
+                                <Image
+                                    src="/placeholder.svg?height=300&width=300"
+                                    width={300}
+                                    height={300}
+                                    alt="Praveen Sureshkumar"
+                                    className="rounded-full border-4 border-[#0B7D44]"
+                                />
+                            </div>
+
+                            {/* Message */}
+                            <div className="w-full md:w-2/3 text-slate-300">
+                                <h3 className="text-xl font-semibold text-slate-200 mb-4">A Message from Seth Tivakaran</h3>
+                                <p className="text-lg leading-relaxed">
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta consectetur elit vel convallis. Sed fermentum urna a sollicitudin laoreet. Mauris libero odio, posuere at arcu eu, feugiat efficitur mauris. Morbi in vulputate tellus, elementum vulputate libero. Donec hendrerit dolor felis, sed finibus dolor bibendum blandit. Fusce vulputate ac velit. "
+                                </p>
+                                <p className="mt-6 text-sm text-slate-400">— Seth Tivakaran, Founder & Executive Director</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section className="w-full py-16 md:py-24">
+                    <div className="container px-4 md:px-6 mx-auto">
+                        <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Technical Leads</h2>
                             <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded"></div>
                             <p className="text-slate-300 max-w-2xl mx-auto">
@@ -57,7 +91,7 @@ export default function WhoWeArePage() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {techLeads.map((member, index) => (
-                                <SpotlightCard key={index} className="border border-[#0B7D44]  hover:shadow-lg transition-shadow">
+                                <SpotlightCard key={index} className="border border-[#0B7D44] hover:shadow-lg transition-shadow">
                                     <CardContent className="p-8 text-center">
                                         <Image
                                             src={member.image}
@@ -75,7 +109,6 @@ export default function WhoWeArePage() {
                     </div>
                 </section>
 
-                {/* Project Managers */}
                 <section className="w-full py-16 md:py-24 ">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
@@ -105,7 +138,6 @@ export default function WhoWeArePage() {
                     </div>
                 </section>
 
-                {/* Analysts */}
                 <section className="w-full py-16 md:py-24">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
