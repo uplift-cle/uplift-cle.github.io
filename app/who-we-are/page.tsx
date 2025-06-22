@@ -62,7 +62,6 @@ export default function WhoWeArePage() {
                                     src="/placeholder.svg?height=300&width=300"
                                     width={300}
                                     height={300}
-                                    alt="Praveen Sureshkumar"
                                     className="rounded-full border-4 border-[#0B7D44]"
                                 />
                             </div>
