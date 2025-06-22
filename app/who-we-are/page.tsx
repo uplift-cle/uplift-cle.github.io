@@ -5,13 +5,13 @@ import Image from "next/image"
 import SpotlightCard from "@/components/SpotlightCard"
 
 export default function WhoWeArePage() {
-    const executiveBoard = [
+    const techLeads = [
         { name: "Seth Tivakaran", title: "Founder & Executive Director", image: "/placeholder.svg?height=200&width=200" },
         { name: "Board Member 1", title: "Chief Strategy Officer", image: "/placeholder.svg?height=200&width=200" },
         { name: "Board Member 2", title: "Chief Operations Officer", image: "/placeholder.svg?height=200&width=200" },
     ]
 
-    const projectManagers = [
+    const stratLeads = [
         { name: "Manager 1", title: "Community Health Analytics Lead", image: "/placeholder.svg?height=150&width=150" },
         { name: "Manager 2", title: "Economic Mobility Lead", image: "/placeholder.svg?height=150&width=150" },
         { name: "Manager 3", title: "Housing & Infrastructure Lead", image: "/placeholder.svg?height=150&width=150" },
@@ -46,18 +46,17 @@ export default function WhoWeArePage() {
                     </div>
                 </section>
 
-                {/* Executive Board */}
                 <section className="w-full py-16 md:py-24">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Executive Board</h2>
+                            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Technical Leads</h2>
                             <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded"></div>
                             <p className="text-slate-300 max-w-2xl mx-auto">
-                                Our leadership team brings together diverse expertise and a shared commitment to Cleveland's future.
+                                Our technical leads bring together proficiency in data science, software development, and community engagement to drive impactful projects.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {executiveBoard.map((member, index) => (
+                            {techLeads.map((member, index) => (
                                 <SpotlightCard key={index} className="border border-[#0B7D44]  hover:shadow-lg transition-shadow">
                                     <CardContent className="p-8 text-center">
                                         <Image
@@ -80,14 +79,14 @@ export default function WhoWeArePage() {
                 <section className="w-full py-16 md:py-24 ">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Project Managers</h2>
+                            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Strategic Leads</h2>
                             <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded"></div>
                             <p className="text-slate-300 max-w-2xl mx-auto">
-                                Our project managers lead specialized initiatives, coordinating teams and driving impact in key focus areas.
+                                Our strategic leads manage key projectg insights and initiatives, ensuring alignment with our mission and effective execution of our programs.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {projectManagers.map((member, index) => (
+                            {stratLeads.map((member, index) => (
                                 <SpotlightCard key={index} className="border border-[#0B7D44]  hover:shadow-lg transition-shadow">
                                     <CardContent className="p-6 text-center">
                                         <Image
