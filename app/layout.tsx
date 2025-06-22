@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     'Uplift CLE',
     'public policy',
     'research-driven solutions',
-    'Case Western Reserve University',
     'Students',
     ''
   ],
