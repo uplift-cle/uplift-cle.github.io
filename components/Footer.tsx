@@ -61,7 +61,9 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <div className="border-t border-slate-800 mt-8 pt-8 text-center text-sm">
-                    <p>© {new Date().getFullYear()} uplift.cle. All rights reserved.</p>
+                    <p> Disclaimer: This organization is not affiliated with any school or university.<br /><br />
+                        © {new Date().getFullYear()} uplift.cle. All rights reserved.
+                    </p>
                 </div>
             </div>
         </footer>
