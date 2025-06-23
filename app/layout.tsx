@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
-import { SpeedInsights } from "@vercel/speed-insights/next"
+//import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'uplift.cle | Transforming Cleveland',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'Students',
     ''
   ],
-  authors: [{ name: 'Uplift.CLE Team', url: 'https://uplift.cle' }],
+  authors: [{ name: 'Uplift.CLE Team', url: 'https://uplift.cle' }], // Make sure to update this we don't have this domain name
   creator: 'Uplift.CLE',
   publisher: 'Uplift.CLE',
 
@@ -76,7 +76,7 @@ export default function RootLayout({
         <html lang="en" className='dark'>
             <body className='bg-background text-foreground antialiased'>
                 {children}
-                <SpeedInsights />
+                {/*<SpeedInsights />*/}
             </body>
         </html>
     )

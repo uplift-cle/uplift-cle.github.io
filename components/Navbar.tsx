@@ -64,8 +64,12 @@ const Navbar = () => {
       <div className=" backdrop-blur-md border border-white/10 rounded-full shadow-lg px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center justify-center">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">U</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              {/*<span className="text-white font-bold text-sm">U</span>*/}
+              <img src="https://avatars.githubusercontent.com/u/216775761?s=200&v=4"
+                alt="uplift.cle Logo"
+                className="w-8 h-8 rounded"
+              />
             </div>
             <span className="font-bold text-xl text-white">
               uplift.<span className="text-emerald-400">cle</span>
