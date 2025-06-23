@@ -29,14 +29,14 @@ export default function WhoWeArePage() {
         <div className="relative flex flex-col min-h-screen  text-slate-200">
             <div className="pointer-events-none fixed inset-0">
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
-                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
                 <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
             </div>
 
             <Navbar />
 
             <main className="relative z-10 flex-1 pt-20">
-                <section className="w-full py-16 md:py-2 text-slate-200 border-b">
+                <section className="w-full py-16 md:py-24 text-slate-200 border-b">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Who We Are</h1>
                         <p className="mx-auto max-w-[700px] text-slate-400 text-lg">
@@ -62,6 +62,7 @@ export default function WhoWeArePage() {
                                     src="/placeholder.svg?height=300&width=300"
                                     width={300}
                                     height={300}
+                                    alt="Founder"
                                     className="rounded-full border-4 border-[#0B7D44]"
                                 />
                             </div>

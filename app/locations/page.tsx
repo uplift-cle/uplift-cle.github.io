@@ -83,7 +83,7 @@ export default function LocationsPage() {
         <div className="relative flex flex-col min-h-screen text-slate-200">
             <div className="pointer-events-none fixed inset-0">
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
-                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
+                <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
                 <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
             </div>
 
@@ -104,9 +104,9 @@ export default function LocationsPage() {
                 <section className="w-full py-16 md:py-24 border-b">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-white mb-4">Our Network</h2>
+                            <h2 className="text-3xl font-bold text-white mb-4">The Network</h2>
                             <p className="text-slate-300 max-w-2xl mx-auto text-lg">
-                                Explore our current operations and planned expansion starting in Cleveland, OH.
+                                Explore our current operations and planned expansion: starting in Cleveland, OH.
                             </p>
                         </div>
 
@@ -134,7 +134,6 @@ export default function LocationsPage() {
                                     <Marker key={id} coordinates={coordinates as Point}>
                                         <g className={`cursor-pointer ${status === "active" ? "small-bounce" : ""}`} transform="translate(0, 0)">
                                             <circle
-                                                r={10}
                                                 fill={status === "active" ? "url(#gradientGreen)" : "url(#gradientGray)"}
                                                 stroke="#fff"
                                                 strokeWidth={2}
