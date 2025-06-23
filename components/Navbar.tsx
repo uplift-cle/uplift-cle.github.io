@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const sections = ['about', 'mission', 'tenants'];
+const sections = ['about', 'mission', 'values'];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +53,7 @@ const Navbar = () => {
   const links = [
     { href: '/#about', label: 'About' },
     { href: '/#mission', label: 'Mission' },
-    { href: '/#tenants', label: 'Tenants' },
+    { href: '/#values', label: 'Values' },
     { href: '/who-we-are', label: 'Who We Are' },
     { href: '/contact', label: 'Contact' },
     { href: '/locations', label: 'Locations' },
