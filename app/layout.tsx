@@ -5,6 +5,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'uplift.cle | Transforming Cleveland',
+  icons: {
+    icon: "/favicon.ico",
+  },
   description:
     'uplift.cle addresses systemic issues in Cleveland through interdisciplinary collaboration, data-driven research, and sustainable, community-first solutions.',
   keywords: [
