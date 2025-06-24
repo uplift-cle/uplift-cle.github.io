@@ -1,9 +1,12 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Users, Target, Lightbulb, Mail, Phone, MapPin, Heart, Building, Globe } from "lucide-react"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import Lottie from "lottie-react"
+import plantAnimation from "./plant.json"
 
 export default function HomePage() {
   return (
@@ -17,11 +20,11 @@ export default function HomePage() {
 
       <Navbar />
 
-      <main className="relative z-10 flex-1 pt-20">
-        <section className="w-full py-12 md:py-24 lg:py-32">
+      <main className="relative z-10 flex-1 pt-24">
+        <section className="w-full py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-14">
+              <div className="lg:w-1/2 text-left space-y-6">
                 <Badge
                   variant="secondary"
                   className="bg-[#0B7D44] text-white hover:bg-green-700"
@@ -36,26 +39,33 @@ export default function HomePage() {
                   Addressing acute, systemic issues within Cleveland through innovative,
                   interdisciplinary, and research-driven solutions.
                 </p>
+              
+                <div className="space-x-4">
+                  <a href="#mission">
+                    <Button
+                      size="lg"
+                      className="bg-[#0B7D44] hover:bg-green-700"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
+                  <a href="/contact">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="border-[#0B7D44] text-[#0B7D44] hover:bg-[#143e26]"
+                    >
+                      Contact Us
+                    </Button>
+                  </a>
+                </div>
               </div>
-              <div className="space-x-4">
-                <a href="#mission">
-                  <Button
-                    size="lg"
-                    className="bg-[#0B7D44] hover:bg-green-700"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </a>
-                <a href="/contact">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-[#0B7D44] text-[#0B7D44] hover:bg-[#143e26]"
-                  >
-                    Contact Us
-                  </Button>
-                </a>
+
+              <div className = "lg:w-1/2 flex justify-center items-center">
+                <div className = "absolute top-0 w-[35rem] h-[37rem] overflow-hidden rounded-b-[10rem] bg-green-900">
+                  <Lottie animationData={plantAnimation} loop={false} className="absolute w-[45rem] left-[-5rem] bottom-[-12rem]"/>
+                </div>
               </div>
             </div>
           </div>
