@@ -65,7 +65,6 @@ const Navbar = () => {
         <Link href="/" className="flex items-center justify-center">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              {/*<span className="text-white font-bold text-sm">U</span>*/}
               <img src="https://avatars.githubusercontent.com/u/216775761?s=200&v=4"
                 alt="uplift.cle Logo"
                 className="w-8 h-8 rounded"
