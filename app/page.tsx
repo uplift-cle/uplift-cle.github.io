@@ -21,7 +21,7 @@ export default function HomePage() {
       <Navbar />
 
       <main className="relative z-10 flex-1 pt-24">
-        <section className="w-full py-10 md:py-24 lg:py-32">
+        <section className="w-full min-h-screen py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-14">
               <div className="lg:w-1/2 text-left space-y-6">
@@ -33,9 +33,9 @@ export default function HomePage() {
                 </Badge>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-slate-100">
                   Uplifting Cleveland Through{" "}
-                  <span className="text-[#0B7D44]">Innovation</span>
+                  <span className="text-[#31fc75]">Innovation</span>
                 </h1>
-                <p className="mx-auto max-w-[700px] text-slate-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="mx-auto max-w-[700px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Addressing acute, systemic issues within Cleveland through innovative,
                   interdisciplinary, and research-driven solutions.
                 </p>
@@ -44,7 +44,7 @@ export default function HomePage() {
                   <a href="#mission">
                     <Button
                       size="lg"
-                      className="bg-[#0B7D44] hover:bg-green-700"
+                      className="bg-[#31fc75] hover:bg-green-700"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -54,7 +54,7 @@ export default function HomePage() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="border-[#0B7D44] text-[#0B7D44] hover:bg-[#143e26]"
+                      className="border-[#31fc75] text-[#31fc75] hover:bg-[#143e26]"
                     >
                       Contact Us
                     </Button>
@@ -71,12 +71,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="mission" className="w-full py-16 md:py-24 lg:py-32 border  text-white">
+        <section id="mission" className="w-full py-16 md:py-24 lg:py-32 text-black bg-slate-400 bg-opacity-60">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Mission</h2>
-                <p className="mx-auto max-w-[800px] text-slate-300 text-lg md:text-xl/relaxed leading-relaxed">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mission Statement</h2>
+                <p className="mx-auto max-w-[800px] text-black text-lg md:text-xl/relaxed leading-relaxed">
                   Uplift.cle is dedicated to addressing acute, systemic issues within Cleveland through innovative,
                   interdisciplinary, and research-driven solutions. We aim to develop scalable interventions and
                   coordinate relief efforts integrating public health, technology, policy, and business strategies to
@@ -84,7 +84,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-                <Card className=" border-slate-700">
+                <Card className=" border-[#31fc75] border-opacity-60">
                   <CardContent className="p-6 text-center space-y-4">
                     <Users className="h-12 w-12 text-[#0B7D44] mx-auto" />
                     <h3 className="text-xl font-semibold text-white">Community Impact</h3>
@@ -93,7 +93,7 @@ export default function HomePage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className=" border-slate-700">
+                <Card className=" border-[#31fc75] border-opacity-60">
                   <CardContent className="p-6 text-center space-y-4">
                     <Target className="h-12 w-12 text-[#0B7D44] mx-auto" />
                     <h3 className="text-xl font-semibold text-white">Research-Driven</h3>
@@ -102,7 +102,7 @@ export default function HomePage() {
                     </p>
                   </CardContent>
                 </Card>
-                <Card className=" border-slate-700">
+                <Card className=" border-[#31fc75] border-opacity-60">
                   <CardContent className="p-6 text-center space-y-4">
                     <Lightbulb className="h-12 w-12 text-[#0B7D44] mx-auto" />
                     <h3 className="text-xl font-semibold text-white">Innovation</h3>
@@ -116,12 +116,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="values" className="w-full py-16 md:py-24 lg:py-32 border">
+        <section id="values" className="w-full py-16 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-12">
               <div className="space-y-4 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-slate-100">
-                  Our Core Values
+                  Core Values
                 </h2>
                 <p className="mx-auto max-w-[700px] text-slate-400 text-lg">
                   The fundamental principles that guide our work and decision-making in every initiative we undertake.
@@ -208,6 +208,7 @@ export default function HomePage() {
         <Footer />
 
       </main>
+
 
     </div>
   )

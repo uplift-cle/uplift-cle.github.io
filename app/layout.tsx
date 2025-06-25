@@ -77,7 +77,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className='dark'>
-            <body className='bg-background text-foreground antialiased'>
+            <body className='bg-green-500 text-slate-900 antialiased'>
                 {children}
                 {/*<SpeedInsights />*/}
             </body>
