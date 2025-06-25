@@ -71,12 +71,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="mission" className="w-full py-16 md:py-24 lg:py-32 text-black bg-slate-400 bg-opacity-60">
+        <section id="mission" className="w-full py-16 md:py-24 lg:py-32 text-white bg-black bg-opacity-60">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mission Statement</h2>
-                <p className="mx-auto max-w-[800px] text-black text-lg md:text-xl/relaxed leading-relaxed">
+                <p className="mx-auto max-w-[800px] text-lg md:text-xl/relaxed leading-relaxed">
                   Uplift.cle is dedicated to addressing acute, systemic issues within Cleveland through innovative,
                   interdisciplinary, and research-driven solutions. We aim to develop scalable interventions and
                   coordinate relief efforts integrating public health, technology, policy, and business strategies to
