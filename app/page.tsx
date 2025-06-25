@@ -7,6 +7,9 @@ import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import Lottie from "lottie-react"
 import plantAnimation from "./plant.json"
+import { motion } from "framer-motion"
+
+const MotionCard = motion(Card)
 
 export default function HomePage() {
   return (
@@ -24,7 +27,7 @@ export default function HomePage() {
         <section className="w-full min-h-screen py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-14">
-              <div className="w-full lg:w-1/2 text-left space-y-6">
+              <motion.div initial = {{x: -25, opacity: 0}} animate = {{x: 0, opacity: 1}} transition = {{duration: 1, ease: "easeInOut"}} className="w-full lg:w-1/2 text-left space-y-6">
                 <Badge
                   variant="secondary"
                   className="bg-[#0B7D44] text-white hover:bg-green-700"
@@ -60,7 +63,7 @@ export default function HomePage() {
                     </Button>
                   </a>
                 </div>
-              </div>
+              </motion.div>
 
               <div className = "w-full lg:w-1/2 flex justify-center items-center">
                 <div className = "absolute top-0 w-0 h-0 overflow-hidden rounded-b-[10rem] bg-green-900 lg:w-[35rem] lg:h-[37rem]">
@@ -74,7 +77,7 @@ export default function HomePage() {
         <section id="mission" className="w-full py-16 md:py-24 lg:py-32 text-white bg-black bg-opacity-60">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-8 text-center">
-              <div className="space-y-4">
+              <motion.div initial = {{opacity:0}} whileInView = {{opacity:1}} transition = {{duration: 1, ease: "easeIn"}} viewport = {{once: true, amount: 0.5}} className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Mission Statement</h2>
                 <p className="mx-auto max-w-[800px] text-lg md:text-xl/relaxed leading-relaxed">
                   Uplift.cle is dedicated to addressing acute, systemic issues within Cleveland through innovative,
@@ -82,9 +85,9 @@ export default function HomePage() {
                   coordinate relief efforts integrating public health, technology, policy, and business strategies to
                   uplift underserved communities.
                 </p>
-              </div>
+              </motion.div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-                <Card className=" border-[#31fc75] border-opacity-60">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.5}} viewport = {{once:true, amount: 0.5}} className=" border-[#31fc75] border-opacity-60">
                   <CardContent className="p-6 text-center space-y-4">
                     <Users className="h-12 w-12 text-[#0B7D44] mx-auto" />
                     <h3 className="text-xl font-semibold text-white">Community Impact</h3>
@@ -92,8 +95,8 @@ export default function HomePage() {
                       Working directly with Cleveland residents to understand and address their most pressing needs.
                     </p>
                   </CardContent>
-                </Card>
-                <Card className=" border-[#31fc75] border-opacity-60">
+                </MotionCard>
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.7}} viewport = {{once:true, amount: 0.5}} className=" border-[#31fc75] border-opacity-60">
                   <CardContent className="p-6 text-center space-y-4">
                     <Target className="h-12 w-12 text-[#0B7D44] mx-auto" />
                     <h3 className="text-xl font-semibold text-white">Research-Driven</h3>
@@ -101,8 +104,8 @@ export default function HomePage() {
                       Leveraging data and evidence-based approaches to create sustainable, scalable solutions.
                     </p>
                   </CardContent>
-                </Card>
-                <Card className=" border-[#31fc75] border-opacity-60">
+                </MotionCard>
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.9}} viewport = {{once:true, amount: 0.5}} className=" border-[#31fc75] border-opacity-60">
                   <CardContent className="p-6 text-center space-y-4">
                     <Lightbulb className="h-12 w-12 text-[#0B7D44] mx-auto" />
                     <h3 className="text-xl font-semibold text-white">Innovation</h3>
@@ -110,7 +113,7 @@ export default function HomePage() {
                       Bringing together diverse expertise to develop creative solutions to complex challenges.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
               </div>
             </div>
           </div>
@@ -119,17 +122,17 @@ export default function HomePage() {
         <section id="values" className="w-full py-16 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-12">
-              <div className="space-y-4 text-center">
+              <motion.div initial = {{opacity:0}} whileInView = {{opacity:1}} transition = {{duration: 1, ease: "easeIn"}} viewport = {{once: true, amount: 0.5}} className="space-y-4 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-slate-100">
                   Core Values
                 </h2>
-                <p className="mx-auto max-w-[700px] text-slate-400 text-lg">
+                <p className="mx-auto max-w-[700px] text-white text-lg">
                   The fundamental principles that guide our work and decision-making in every initiative we undertake.
                 </p>
-              </div>
+              </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                <Card className="hover:shadow-lg transition-shadow">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.2}} viewport = {{once:true, amount: 0.5}} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-8 space-y-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#0B7D44] to-green-700 rounded-lg flex items-center justify-center">
                       <Users className="h-6 w-6 text-white" />
@@ -139,9 +142,9 @@ export default function HomePage() {
                       Every solution begins with listening to and learning from the communities we serve, ensuring their voices guide our approach.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
 
-                <Card className="hover:shadow-lg transition-shadow">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.2}} viewport = {{once:true, amount: 0.5}} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-8 space-y-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
                       <Target className="h-6 w-6 text-white" />
@@ -151,9 +154,9 @@ export default function HomePage() {
                       We ground our interventions in rigorous research and data analysis to ensure effectiveness and measurable impact.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
 
-                <Card className="hover:shadow-lg transition-shadow">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.2}} viewport = {{once:true, amount: 0.5}} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-8 space-y-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-teal-800 to-teal-600 rounded-lg flex items-center justify-center">
                       <Lightbulb className="h-6 w-6 text-white" />
@@ -163,9 +166,9 @@ export default function HomePage() {
                       Complex problems require diverse perspectives. We bring together experts from multiple fields to create comprehensive solutions.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
 
-                <Card className="hover:shadow-lg transition-shadow">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.2}} viewport = {{once:true, amount: 0.5}} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-8 space-y-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
                       <Globe className="h-6 w-6 text-white" />
@@ -175,9 +178,9 @@ export default function HomePage() {
                       We design interventions that can grow and adapt, creating lasting change that extends beyond individual projects.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
 
-                <Card className="hover:shadow-lg transition-shadow">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.2}} viewport = {{once:true, amount: 0.5}} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-8 space-y-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-yellow-700 to-yellow-600 rounded-lg flex items-center justify-center">
                       <Heart className="h-6 w-6 text-white" />
@@ -187,9 +190,9 @@ export default function HomePage() {
                       We prioritize addressing systemic inequities and ensuring our work benefits those who need it most.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
 
-                <Card className="hover:shadow-lg transition-shadow">
+                <MotionCard initial = {{opacity: 0, y: 20}} whileInView = {{opacity: 1, y: 0}} transition = {{duration: 1, ease: "easeOut", delay: 0.2}} viewport = {{once:true, amount: 0.5}} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-8 space-y-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-indigo-800 to-indigo-600 rounded-lg flex items-center justify-center">
                       <Building className="h-6 w-6 text-white" />
@@ -199,7 +202,7 @@ export default function HomePage() {
                       We build solutions that can be maintained and improved over time, creating lasting positive change for Cleveland.
                     </p>
                   </CardContent>
-                </Card>
+                </MotionCard>
               </div>
             </div>
           </div>
