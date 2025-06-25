@@ -51,11 +51,11 @@ const Navbar = () => {
     }`;
 
   const links = [
-    { href: '/#about', label: 'About' },
     { href: '/#mission', label: 'Mission' },
     { href: '/#values', label: 'Values' },
     { href: '/who-we-are', label: 'Who We Are' },
     { href: '/contact', label: 'Contact' },
+    { href: '/donate', label: 'Donate'},
     { href: '/locations', label: 'Locations' },
   ];
 
