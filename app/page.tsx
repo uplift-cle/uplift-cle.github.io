@@ -24,7 +24,7 @@ export default function HomePage() {
         <section className="w-full min-h-screen py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-14">
-              <div className="lg:w-1/2 text-left space-y-6">
+              <div className="w-full lg:w-1/2 text-left space-y-6">
                 <Badge
                   variant="secondary"
                   className="bg-[#0B7D44] text-white hover:bg-green-700"
@@ -35,7 +35,7 @@ export default function HomePage() {
                   Uplifting Cleveland Through{" "}
                   <span className="text-[#31fc75]">Innovation</span>
                 </h1>
-                <p className="mx-auto max-w-[700px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="mx-auto max-w-[700px] text-white text-lg sm: text-xl">
                   Addressing acute, systemic issues within Cleveland through innovative,
                   interdisciplinary, and research-driven solutions.
                 </p>
@@ -62,8 +62,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className = "lg:w-1/2 flex justify-center items-center">
-                <div className = "absolute top-0 w-[35rem] h-[37rem] overflow-hidden rounded-b-[10rem] bg-green-900">
+              <div className = "w-full lg:w-1/2 flex justify-center items-center">
+                <div className = "absolute top-0 w-0 h-0 overflow-hidden rounded-b-[10rem] bg-green-900 lg:w-[35rem] lg:h-[37rem]">
                   <Lottie animationData={plantAnimation} loop={false} className="absolute w-[45rem] left-[-5rem] bottom-[-12rem]"/>
                 </div>
               </div>
