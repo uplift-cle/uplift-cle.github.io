@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const Footer = () => {
     return (
-        <footer className="text-slate py-12 bg-slate-400 bg-opacity-60 text-black font-bold">
+        <footer className="text-slate py-12 bg-black bg-opacity-60 text-white font-bold">
             <div className="container px-4 md:px-6 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8"> {/* Added md:gap-8 for clarity */}
                     {/* Logo and Description */}
@@ -23,13 +23,13 @@ const Footer = () => {
                     <div className="space-y-4 text-center md:text-left"> {/* Centered on mobile, left-aligned on desktop */}
                         <h4 className="font-semibold">Organization</h4>
                         <div className="space-y-2 text-sm">
-                            <Link href="/#about" className="block hover:text-white transition-colors">
+                            <Link href="/#about" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 About
                             </Link>
-                            <Link href="/#mission" className="block hover:text-white transition-colors">
+                            <Link href="/#mission" className="block hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Mission
                             </Link>
-                            <Link href="/who-we-are" className="block hover:text-white transition-colors">
+                            <Link href="/who-we-are" className="block hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Who We Are
                             </Link>
                         </div>
