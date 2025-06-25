@@ -26,10 +26,10 @@ const Footer = () => {
                             <Link href="/#about" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 About
                             </Link>
-                            <Link href="/#mission" className="block hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
+                            <Link href="/#mission" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Mission
                             </Link>
-                            <Link href="/who-we-are" className="block hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
+                            <Link href="/who-we-are" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Who We Are
                             </Link>
                         </div>
@@ -39,13 +39,13 @@ const Footer = () => {
                     <div className="space-y-4 text-center md:text-left"> {/* Centered on mobile, left-aligned on desktop */}
                         <h4 className="font-semibold">Get Involved</h4>
                         <div className="space-y-2 text-sm">
-                            <Link href="/contact" className="block hover:text-white transition-colors">
+                            <Link href="/contact" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Contact
                             </Link>
-                            <Link href="/donate" className="block hover:text-white transition-colors">
+                            <Link href="/donate" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Donate
                             </Link>
-                            <Link href="/locations" className="block hover:text-white transition-colors">
+                            <Link href="/locations" className="block decoration-transparent hover:decoration-green-700 hover:underline hover:decoration-4 transition-colors">
                                 Locations
                             </Link>
                         </div>
