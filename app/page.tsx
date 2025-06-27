@@ -23,7 +23,7 @@ export default function HomePage() {
 
       <Navbar />
 
-      <main className="relative z-10 flex-1 pt-24">
+      <main className="relative z-10 flex-1 pt-">
         <section className="w-full min-h-screen py-10 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-14">
@@ -38,7 +38,7 @@ export default function HomePage() {
                   Uplifting Cleveland Through{" "}
                   <span className="text-[#31fc75]">Innovation</span>
                 </h1>
-                <p className="mx-auto max-w-[700px] text-white text-lg sm: text-xl">
+                <p className="mx-auto max-w-[700px] text-white text-lg sm:text-xl">
                   Addressing acute, systemic issues within Cleveland through innovative,
                   interdisciplinary, and research-driven solutions.
                 </p>

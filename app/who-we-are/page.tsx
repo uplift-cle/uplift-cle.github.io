@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar"
 import { CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import SpotlightCard from "@/components/SpotlightCard"
+import { motion } from "framer-motion"
 
 export default function WhoWeArePage() {
     const techLeads = [
@@ -42,40 +43,6 @@ export default function WhoWeArePage() {
                         <p className="mx-auto max-w-[700px] text-slate-400 text-lg">
                             Meet the dedicated team working to uplift Cleveland through innovative solutions and community-centered approaches.
                         </p>
-                    </div>
-                </section>
-
-                <section className="w-full py-16 md:py-24">
-                    <div className="container px-4 md:px-6 mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Founder</h2>
-                            <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded"></div>
-                            <p className="text-slate-300 max-w-2xl mx-auto">
-                                Uplift.cle was founded with the goal of addressing Cleveland’s most pressing challenges through collaboration, innovation, and compassion.
-                            </p>
-                        </div>
-
-                        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 py-10 border-b">
-                            {/* Image */}
-                            <div className="w-full md:w-1/3 flex justify-center">
-                                <Image
-                                    src="/placeholder.svg?height=300&width=300"
-                                    width={300}
-                                    height={300}
-                                    alt="Founder"
-                                    className="rounded-full border-4 border-[#0B7D44]"
-                                />
-                            </div>
-
-                            {/* Message */}
-                            <div className="w-full md:w-2/3 text-slate-300">
-                                <h3 className="text-xl font-semibold text-slate-200 mb-4">A Message from Seth Tivakaran</h3>
-                                <p className="text-lg leading-relaxed">
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta consectetur elit vel convallis. Sed fermentum urna a sollicitudin laoreet. Mauris libero odio, posuere at arcu eu, feugiat efficitur mauris. Morbi in vulputate tellus, elementum vulputate libero. Donec hendrerit dolor felis, sed finibus dolor bibendum blandit. Fusce vulputate ac velit. "
-                                </p>
-                                <p className="mt-6 text-sm text-slate-400">— Seth Tivakaran, Founder & Executive Director</p>
-                            </div>
-                        </div>
                     </div>
                 </section>
 

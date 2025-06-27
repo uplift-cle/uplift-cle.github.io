@@ -1,13 +1,34 @@
+'use client'
+
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, Users, Target, Building } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function DonatePage() {
+  const [loading, setLoading] = useState(false)
+
+  const handleDonate = async () => {
+    setLoading(true)
+    const res = await fetch('/api/checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    })
+
+    const data = await res.json()
+    if (data.url) {
+      window.location.href = data.url
+    } else {
+      alert('Failed to initiate donation.')
+      setLoading(false)
+    }
+  }
+
   return (
-    <div className="relative flex flex-col min-h-screen  text-slate-200">
+    <div className="relative flex flex-col min-h-screen text-slate-200">
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
@@ -17,7 +38,7 @@ export default function DonatePage() {
       <Navbar />
 
       <main className="relative z-10 flex-1 pt-20">
-        <section className="w-full py-16 md:py-24  text-white">
+        <section className="w-full py-16 md:py-24 text-white">
           <div className="container px-4 md:px-6 mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Support Our Mission</h1>
             <p className="mx-auto max-w-[700px] text-slate-300 text-lg">
@@ -27,39 +48,37 @@ export default function DonatePage() {
           </div>
         </section>
 
-        {/* Coming Soon Message */}
         <section className="w-full py-16 md:py-24 border">
           <div className="container px-4 md:px-6 mx-auto">
             <Card className="max-w-2xl mx-auto border-slate-200 shadow-lg">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl text-white">Donation Platform Coming Soon</CardTitle>
+                <CardTitle className="text-2xl text-white">Donation Platform</CardTitle>
               </CardHeader>
               <CardContent className="text-center space-y-6">
                 <Heart className="h-16 w-16 text-green-600 mx-auto" />
                 <p className="text-white/80 text-lg">
-                  We're currently setting up our secure donation platform to make it easy for supporters like you to
-                  contribute to our mission of uplifting Cleveland communities.
+                  Secure payments powered by Stripe. Choose your amount and proceed to checkout.
                 </p>
-                <p className="text-white/80">
-                  In the meantime, if you'd like to support our work or learn about partnership opportunities, please
-                  reach out to us directly.
-                </p>
-                <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700">
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
+                <div className="space-y-4">
+                  <Button
+                    onClick={handleDonate}
+                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700"
+                    disabled={loading}
+                  >
+                    {loading ? 'Redirecting…' : `Donate`}
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        {/* Impact Areas */}
         <section className="w-full py-16 md:py-24 border-b">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Your Support Will Help</h2>
               <p className="text-white/80 max-w-2xl mx-auto text-lg">
-                When our donation platform launches, your contributions will directly support these key areas of our
-                work.
+                Your contributions support these key areas of our mission.
               </p>
             </div>
 
@@ -106,7 +125,7 @@ export default function DonatePage() {
             </div>
           </div>
         </section>
-      <Footer />
+        <Footer />
       </main>
     </div>
   )
