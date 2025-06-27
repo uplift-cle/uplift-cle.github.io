@@ -1,32 +1,11 @@
-'use client'
-
+import DonateButton from "@/components/donate/DonateButton"
 import Footer from "@/components/Footer"
+import MotionSection from "@/components/motion/MotionSection"
 import Navbar from "@/components/Navbar"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, Users, Target, Building } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
 
 export default function DonatePage() {
-  const [loading, setLoading] = useState(false)
-
-  const handleDonate = async () => {
-    setLoading(true)
-    const res = await fetch('/api/checkout', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-    })
-
-    const data = await res.json()
-    if (data.url) {
-      window.location.href = data.url
-    } else {
-      alert('Failed to initiate donation.')
-      setLoading(false)
-    }
-  }
-
   return (
     <div className="relative flex flex-col min-h-screen text-slate-200">
       <div className="pointer-events-none fixed inset-0">
@@ -38,7 +17,7 @@ export default function DonatePage() {
       <Navbar />
 
       <main className="relative z-10 flex-1 pt-20">
-        <section className="w-full py-16 md:py-24 text-white">
+        <MotionSection className="w-full py-16 md:py-24 text-white border-b">
           <div className="container px-4 md:px-6 mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Support Our Mission</h1>
             <p className="mx-auto max-w-[700px] text-slate-300 text-lg">
@@ -46,9 +25,9 @@ export default function DonatePage() {
               difference.
             </p>
           </div>
-        </section>
+        </MotionSection>
 
-        <section className="w-full py-16 md:py-24 border">
+        <MotionSection className="w-full py-16 md:py-24">
           <div className="container px-4 md:px-6 mx-auto">
             <Card className="max-w-2xl mx-auto border-slate-200 shadow-lg">
               <CardHeader className="text-center">
@@ -60,20 +39,14 @@ export default function DonatePage() {
                   Secure payments powered by Stripe. Choose your amount and proceed to checkout.
                 </p>
                 <div className="space-y-4">
-                  <Button
-                    onClick={handleDonate}
-                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700"
-                    disabled={loading}
-                  >
-                    {loading ? 'Redirecting…' : `Donate`}
-                  </Button>
+                  <DonateButton />
                 </div>
               </CardContent>
             </Card>
           </div>
-        </section>
+        </MotionSection>
 
-        <section className="w-full py-16 md:py-24 border-b">
+        <MotionSection className="w-full py-16 md:py-24 border-b">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Your Support Will Help</h2>
@@ -124,7 +97,7 @@ export default function DonatePage() {
               </Card>
             </div>
           </div>
-        </section>
+        </MotionSection>
         <Footer />
       </main>
     </div>

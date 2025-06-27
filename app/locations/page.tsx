@@ -1,19 +1,9 @@
-"use client"
 import Footer from "@/components/Footer"
+import MapView from "@/components/MapView"
+import MotionSection from "@/components/motion/MotionSection"
 import Navbar from "@/components/Navbar"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Building, Users, Calendar, Navigation } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-
-import {
-    ComposableMap,
-    Geographies,
-    Geography,
-    Marker,
-    Point,
-} from "react-simple-maps"
+import { MapPin, Building, Users, Calendar } from "lucide-react"
 
 export default function LocationsPage() {
     const locations = [
@@ -90,7 +80,7 @@ export default function LocationsPage() {
             <Navbar />
 
             <main className="relative z-10 flex-1 pt-20">
-                <section className="w-full py-16 md:py-24 text-white border-b">
+                <MotionSection className="w-full py-16 md:py-24 text-white border-b">
                     <div className="container px-4 md:px-6 mx-auto text-center">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
                             Our Locations
@@ -99,9 +89,9 @@ export default function LocationsPage() {
                             Currently serving Cleveland with plans to expand our impact across Ohio and beyond.
                         </p>
                     </div>
-                </section>
+                </MotionSection>
 
-                <section className="w-full py-16 md:py-24 border-b">
+                <MotionSection className="w-full py-16 md:py-24 border-b">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-white mb-4">The Network</h2>
@@ -111,62 +101,7 @@ export default function LocationsPage() {
                         </div>
 
                         <div className="relative rounded-2xl shadow-2xl overflow-x-auto mb-12">
-                            <ComposableMap
-                                projection="geoAlbersUsa"
-                                width={1000}
-                                height={600}
-                                className="max-w-full mx-auto"
-                            >
-                                <Geographies geography="https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json">
-                                    {({ geographies }) =>
-                                        geographies.map((geo) => (
-                                            <Geography
-                                                key={geo.rsmKey}
-                                                geography={geo}
-                                                fill="#0B7D44"
-                                                stroke="#1f2937"
-                                                strokeWidth={0.5}
-                                            />
-                                        ))
-                                    }
-                                </Geographies>
-                                {locations.map(({ id, name, status, coordinates }) => (
-                                    <Marker key={id} coordinates={coordinates as Point}>
-                                        <g className={`cursor-pointer ${status === "active" ? "small-bounce" : ""}`} transform="translate(0, 0)">
-                                            <circle
-                                                fill={status === "active" ? "url(#gradientGreen)" : "url(#gradientGray)"}
-                                                stroke="#fff"
-                                                strokeWidth={2}
-                                            />
-                                            <MapPin
-                                                size={16}
-                                                strokeWidth={2}
-                                                color="white"
-                                                style={{ pointerEvents: "none" }}
-                                                transform="translate(-8, -8)"
-                                            />
-                                        </g>
-                                        <text
-                                            textAnchor="middle"
-                                            y={25}
-                                            style={{ fontFamily: "arial", fill: "#9ca3af", fontSize: 12 }}
-                                        >
-                                            {name}
-                                        </text>
-                                    </Marker>
-                                ))}
-
-                                <defs>
-                                    <linearGradient id="gradientGreen" x1="0" y1="0" x2="1" y2="1">
-                                        <stop offset="0%" stopColor="#22c55e" />
-                                        <stop offset="100%" stopColor="#16a34a" />
-                                    </linearGradient>
-                                    <linearGradient id="gradientGray" x1="0" y1="0" x2="1" y2="1">
-                                        <stop offset="0%" stopColor="#94a3b8" />
-                                        <stop offset="100%" stopColor="#64748b" />
-                                    </linearGradient>
-                                </defs>
-                            </ComposableMap>
+                            <MapView locations={locations} />
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -217,7 +152,7 @@ export default function LocationsPage() {
                             ))}
                         </div>
                     </div>
-                </section>
+                </MotionSection>
 
                 <Footer />
             </main>

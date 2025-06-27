@@ -5,12 +5,13 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Mail, Phone, MapPin } from "lucide-react"
-import Link from "next/link"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import MotionSection from "@/components/motion/MotionSection"
+
 export default function ContactPage() {
   return (
-    <div className="relative flex flex-col min-h-screen  text-slate-200">
+    <div className="relative flex flex-col min-h-screen text-slate-200">
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
         <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-green-500/10 blur-[100px]" />
@@ -20,20 +21,18 @@ export default function ContactPage() {
       <Navbar />
 
       <main className="relative z-10 flex-1 pt-20">
-        <section className="w-full py-16 md:py-24 text-white">
+        <MotionSection className="w-full py-16 md:py-24 text-white border-b">
           <div className="container px-4 md:px-6 mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">Contact Us</h1>
             <p className="mx-auto max-w-[900px] text-slate-300 text-lg">
               Ready to get involved? We'd love to hear from you. Reach out to learn more about our work or explore partnership opportunities.
             </p>
           </div>
-        </section>
+        </MotionSection>
 
-        {/* Contact Form and Info */}
-        <section className="w-full py-16 md:py-24 border-b">
+        <MotionSection className="w-full py-16 md:py-24 border-b">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
               <Card className=" border-slate-900 text-white">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white">Get in Touch</CardTitle>
@@ -150,7 +149,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </section>
+        </MotionSection>
         <Footer />
       </main>
     </div>
