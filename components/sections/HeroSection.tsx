@@ -42,7 +42,7 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          <div className="w-full lg:w-1/2 flex justify-center items-center relative">
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
             <div className="absolute top-0 w-0 h-0 overflow-hidden rounded-b-[10rem] bg-green-900 lg:w-[35rem] lg:h-[37rem]">
               <Lottie animationData={plantAnimation} loop={false} className="absolute w-[45rem] left-[-5rem] bottom-[-12rem]" />
             </div>
