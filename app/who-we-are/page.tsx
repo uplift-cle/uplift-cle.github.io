@@ -9,7 +9,6 @@ export default function WhoWeArePage() {
   const executiveBoard = [
     { name: "Seth Tivakaran", title: "Co-founder", image: "/placeholder.svg?height=200&width=200" },
     { name: "Jacob Slater", title: "Co-founder", image: "/placeholder.svg?height=200&width=200" },
-    { name: "Jeffery Placeholder", title: "Co-founder", image: "/placeholder.svg?height=200&width=200" },
   ]
 
   const projectManagers = [
@@ -57,7 +56,7 @@ export default function WhoWeArePage() {
               Our executive board provides strategic direction and oversight, ensuring our initiatives align with our mission to serve the Cleveland community.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {executiveBoard.map((member, index) => (
               <SpotlightCard key={index} className="border border-[#0B7D44] hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
