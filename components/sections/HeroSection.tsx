@@ -1,4 +1,3 @@
-// app/HeroSection.client.tsx (Client Component)
 "use client"
 
 import { Button } from "@/components/ui/button"

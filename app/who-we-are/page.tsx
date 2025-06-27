@@ -6,24 +6,29 @@ import SpotlightCard from "@/components/SpotlightCard"
 import MotionSection from "@/components/motion/MotionSection"
 
 export default function WhoWeArePage() {
-  const techLeads = [
+  const executiveBoard = [
+    { name: "Seth Tivakaran", title: "Co-founder", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Jacob Slater", title: "Co-founder", image: "/placeholder.svg?height=200&width=200" },
+    { name: "Jeffery Placeholder", title: "Co-founder", image: "/placeholder.svg?height=200&width=200" },
+  ]
+
+  const projectManagers = [
     { name: "Jacob Slater", title: "Hydroponics Tech Lead", image: "/placeholder.svg?height=200&width=200" },
     { name: "Praveen Sureshkumar", title: "Refrigeration Tech Lead", image: "/placeholder.svg?height=200&width=200" },
     { name: "Donovan Crowley", title: "Project Tech Lead", image: "/placeholder.svg?height=200&width=200" },
-  ]
-
-  const stratLeads = [
     { name: "Adam Joseph", title: "Hydroponics Strategic Lead", image: "/placeholder.svg?height=150&width=150" },
     { name: "Adam Esa", title: "Refrigeration Strategic Lead", image: "/placeholder.svg?height=150&width=150" },
     { name: "Brendan Bradish", title: "Project Strategic Lead", image: "/placeholder.svg?height=150&width=150" },
   ]
 
   const analysts = [
-    { name: "Analyst 1", title: "Data Analyst", image: "/placeholder.svg?height=120&width=120" },
-    { name: "Analyst 2", title: "Policy Analyst", image: "/placeholder.svg?height=120&width=120" },
-    { name: "Analyst 3", title: "Research Analyst", image: "/placeholder.svg?height=120&width=120" },
-    { name: "Analyst 4", title: "Community Analyst", image: "/placeholder.svg?height=120&width=120" },
-    { name: "Analyst 5", title: "Technology Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Paul Salah", title: "Business Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Finn Bonner", title: "Policy Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Lucas Siepser", title: "Engineering Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "George Wood-Leness", title: "Software Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Owen Schessler", title: "Software Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Joseph Rivello", title: "Business Analyst", image: "/placeholder.svg?height=120&width=120" },
+    { name: "Will Larson", title: "Engineering Analyst", image: "/placeholder.svg?height=120&width=120" },
   ]
 
   return (
@@ -46,14 +51,14 @@ export default function WhoWeArePage() {
 
         <MotionSection className="w-full py-16 md:py-24 border-b">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Technical Leads</h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Executive Board</h2>
             <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded" />
             <p className="text-slate-300 max-w-2xl mx-auto">
-              Our technical leads bring together proficiency in data science, software development, and community engagement to drive impactful projects.
+              Our executive board provides strategic direction and oversight, ensuring our initiatives align with our mission to serve the Cleveland community.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {techLeads.map((member, index) => (
+          {executiveBoard.map((member, index) => (
               <SpotlightCard key={index} className="border border-[#0B7D44] hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Image
@@ -73,14 +78,14 @@ export default function WhoWeArePage() {
 
         <MotionSection className="w-full py-16 md:py-24 border-b">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Strategic Leads</h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#0B7D44]">Project Managers</h2>
             <div className="w-24 h-1 bg-[#0B7D44] mx-auto mb-6 rounded" />
             <p className="text-slate-300 max-w-2xl mx-auto">
-              Our strategic leads manage key project insights and initiatives, ensuring alignment with our mission and effective execution of our programs.
+              Our project managers are composed of technical and strategic leads who oversee the planning, execution, and success of our key initiatives.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stratLeads.map((member, index) => (
+            {projectManagers.map((member, index) => (
               <SpotlightCard key={index} className="border border-[#0B7D44] hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <Image
