@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
 
 export default function HeroSection() {
   return (
-    <section className="w-full min-h-screen py-10 md:py-24 lg:py-32">
+    <section className="w-full min-h-screen py-28 md:py-24 lg:py-52">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-14">
           <motion.div
