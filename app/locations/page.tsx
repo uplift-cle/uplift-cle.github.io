@@ -1,73 +1,74 @@
-import Footer from "@/components/Footer"
-import MapView from "@/components/MapView"
-import MotionSection from "@/components/motion/MotionSection"
-import Navbar from "@/components/Navbar"
-import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Building, Users, Calendar } from "lucide-react"
+import Footer from '@/components/Footer';
+import MapView from '@/components/MapView';
+import MotionSection from '@/components/motion/MotionSection';
+import Navbar from '@/components/Navbar';
+import SpotlightCard from '@/components/SpotlightCard';
+import { CardContent } from '@/components/ui/card';
+import { MapPin, Building, Users, Calendar } from 'lucide-react';
 
 export default function LocationsPage() {
     const locations = [
         {
             id: 1,
-            name: "Cleveland",
-            status: "active",
+            name: 'Cleveland',
+            status: 'active',
             coordinates: [-81.6944, 41.4993],
-            description: "Our headquarters and primary service area",
-            established: "2024",
-            neighborhoods: "15+",
-            projects: "3",
+            description: 'Our headquarters and primary service area',
+            established: '2024',
+            neighborhoods: '15+',
+            projects: '3',
         },
         {
             id: 2,
-            name: "NYC",
-            status: "planned",
+            name: 'NYC',
+            status: 'planned',
             coordinates: [-74.006, 40.7128],
-            description: "Planned expansion to an urban hub",
-            established: "Coming 2025",
-            neighborhoods: "TBD",
-            projects: "TBD",
+            description: 'Planned expansion to an urban hub',
+            established: 'Coming 2025',
+            neighborhoods: 'TBD',
+            projects: 'TBD',
         },
         {
             id: 3,
-            name: "Los Angeles",
-            status: "planned",
+            name: 'Los Angeles',
+            status: 'planned',
             coordinates: [-118.2437, 34.0522],
-            description: "Extending our impact to the West Coast",
-            established: "Coming 2026",
-            neighborhoods: "TBD",
-            projects: "TBD",
+            description: 'Extending our impact to the West Coast',
+            established: 'Coming 2026',
+            neighborhoods: 'TBD',
+            projects: 'TBD',
         },
         {
             id: 4,
-            name: "Chicago",
-            status: "planned",
+            name: 'Chicago',
+            status: 'planned',
             coordinates: [-87.6298, 41.8781],
-            description: "Creating solutions in the Midwest",
-            established: "Coming 2027",
-            neighborhoods: "TBD",
-            projects: "TBD",
+            description: 'Creating solutions in the Midwest',
+            established: 'Coming 2027',
+            neighborhoods: 'TBD',
+            projects: 'TBD',
         },
         {
             id: 5,
-            name: "Austin",
-            status: "planned",
+            name: 'Austin',
+            status: 'planned',
             coordinates: [-97.7431, 30.2672],
-            description: "Expansion into the Deep South",
-            established: "Coming 2027",
-            neighborhoods: "TBD",
-            projects: "TBD",
+            description: 'Expansion into the Deep South',
+            established: 'Coming 2027',
+            neighborhoods: 'TBD',
+            projects: 'TBD',
         },
         {
             id: 6,
-            name: "Atlanta",
-            status: "planned",
+            name: 'Atlanta',
+            status: 'planned',
             coordinates: [-84.3879, 33.749],
-            description: "Bringing our model to the Southeast",
-            established: "Coming 2028",
-            neighborhoods: "TBD",
-            projects: "TBD",
-        }
-    ]
+            description: 'Bringing our model to the Southeast',
+            established: 'Coming 2028',
+            neighborhoods: 'TBD',
+            projects: 'TBD',
+        },
+    ];
 
     return (
         <div className="relative flex flex-col min-h-screen text-slate-200">
@@ -86,7 +87,8 @@ export default function LocationsPage() {
                             Our Locations
                         </h1>
                         <p className="mx-auto max-w-[700px] text-slate-300 text-lg">
-                            Currently serving Cleveland with plans to expand our impact across Ohio and beyond.
+                            Currently serving Cleveland with plans to expand our
+                            impact across Ohio and beyond.
                         </p>
                     </div>
                 </MotionSection>
@@ -94,9 +96,12 @@ export default function LocationsPage() {
                 <MotionSection className="w-full py-16 md:py-24 border-b">
                     <div className="container px-4 md:px-6 mx-auto">
                         <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-white mb-4">The Network</h2>
+                            <h2 className="text-3xl font-bold text-white mb-4">
+                                The Network
+                            </h2>
                             <p className="text-slate-300 max-w-2xl mx-auto text-lg">
-                                Explore our current operations and planned expansion: starting in Cleveland, OH.
+                                Explore our current operations and planned
+                                expansion: starting in Cleveland, OH.
                             </p>
                         </div>
 
@@ -106,49 +111,70 @@ export default function LocationsPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {locations.map((location) => (
-                                <Card
+                                <SpotlightCard
                                     key={location.id}
-                                    className="border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                                    className="bg-[#040705] border border-slate-700 hover:border-slate-600 transition-all duration-300 w-full flex flex-col"
                                 >
-                                    <CardContent className="p-6">
-                                        <div className="flex items-center space-x-3 mb-4">
+                                    <CardContent className="p-6 flex flex-col flex-grow space-y-4">
+                                        <div className="flex items-center space-x-3">
                                             <div
-                                                className={`w-10 h-10 rounded-full flex items-center justify-center ${location.status === "active"
-                                                    ? "bg-gradient-to-br from-green-500 to-emerald-600"
-                                                    : "bg-gradient-to-br from-slate-400 to-slate-500"
-                                                    }`}
+                                                className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                                                    location.status === 'active'
+                                                        ? 'bg-gradient-to-br from-green-500 to-emerald-600'
+                                                        : 'bg-gradient-to-br from-slate-400 to-slate-500'
+                                                }`}
                                             >
                                                 <MapPin className="h-5 w-5 text-white" />
                                             </div>
                                             <div>
-                                                <h3 className="text-xl font-semibold text-white">{location.name}</h3>
+                                                <h3 className="text-xl font-semibold text-white">
+                                                    {location.name}
+                                                </h3>
                                                 <p
-                                                    className={`text-sm font-medium ${location.status === "active" ? "text-green-400" : "text-slate-400"
-                                                        }`}
+                                                    className={`text-sm font-medium ${
+                                                        location.status ===
+                                                        'active'
+                                                            ? 'text-green-400'
+                                                            : 'text-slate-400'
+                                                    }`}
                                                 >
-                                                    {location.status === "active" ? "Active" : "Planned"}
+                                                    {location.status ===
+                                                    'active'
+                                                        ? 'Active'
+                                                        : 'Planned'}
                                                 </p>
                                             </div>
                                         </div>
 
-                                        <p className="text-slate-300 mb-4">{location.description}</p>
+                                        <p className="text-slate-300">
+                                            {location.description}
+                                        </p>
 
-                                        <div className="space-y-3">
+                                        <div className="space-y-3 mt-auto">
                                             <div className="flex items-center space-x-2">
                                                 <Calendar className="h-4 w-4 text-slate-400" />
-                                                <span className="text-sm text-slate-300">Established: {location.established}</span>
+                                                <span className="text-sm text-slate-300">
+                                                    Established:{' '}
+                                                    {location.established}
+                                                </span>
                                             </div>
                                             <div className="flex items-center space-x-2">
                                                 <Building className="h-4 w-4 text-slate-400" />
-                                                <span className="text-sm text-slate-300">Neighborhoods: {location.neighborhoods}</span>
+                                                <span className="text-sm text-slate-300">
+                                                    Neighborhoods:{' '}
+                                                    {location.neighborhoods}
+                                                </span>
                                             </div>
                                             <div className="flex items-center space-x-2">
                                                 <Users className="h-4 w-4 text-slate-400" />
-                                                <span className="text-sm text-slate-300">Active Projects: {location.projects}</span>
+                                                <span className="text-sm text-slate-300">
+                                                    Active Projects:{' '}
+                                                    {location.projects}
+                                                </span>
                                             </div>
                                         </div>
                                     </CardContent>
-                                </Card>
+                                </SpotlightCard>
                             ))}
                         </div>
                     </div>
@@ -157,5 +183,5 @@ export default function LocationsPage() {
                 <Footer />
             </main>
         </div>
-    )
+    );
 }
